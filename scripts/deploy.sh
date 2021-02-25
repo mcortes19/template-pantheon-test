@@ -9,7 +9,7 @@ git branch $BRANCH ; git checkout $BRANCH
 shopt -s extglob
 rm -rf ./!(.git|.|..)
 cd ../
-cp -r config drush modules settings themes web $CLONEFOLDER/
+cp -r config drush modules settings themes vendor web $CLONEFOLDER/
 cp ./{.composer.json,composer.lock,composer.patches.json,package.json,package-lock.json,pantheon.yml} $CLONEFOLDER/
 cd $CLONEFOLDER
 composer install --ignore-platform-reqs
