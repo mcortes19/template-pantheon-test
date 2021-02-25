@@ -116,7 +116,6 @@
         },
         "symlinks": {
           "settings/settings.php": "web/sites/default/settings.php",
-          "settings/settings.pantheon.php": "web/sites/default/settings.pantheon.php",
           "settings/settings.local.php": "web/sites/default/settings.local.php",
           "settings/settings.secret.php": "web/sites/default/settings.secret.php",
           "settings/services.yml": "web/sites/default/services.yml",

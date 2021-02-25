@@ -17,8 +17,8 @@ find ./web/themes/contrib/ -name ".git" -exec rm -rf {} \;
 find ./web/sites/all/assets/vendor/ -name ".git" -exec rm -rf {} \;
 find ./web/libraries/ -name ".git" -exec rm -rf {} \;
 find ./web/sites/all/libraries/ -name ".git" -exec rm -rf {} \;
-cp -r web $CLONEFOLDER/web
-cp -r content $CLONEFOLDER/
+rm -rf ./web/sites/default/files
+cp -r web $CLONEFOLDER/
 mv vendor $CLONEFOLDER/
 cp pantheon.yml $CLONEFOLDER/
 cp composer.json $CLONEFOLDER/
