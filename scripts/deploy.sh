@@ -9,10 +9,11 @@ git branch $BRANCH ; git checkout $BRANCH
 shopt -s extglob
 rm -rf ./!(.git|.|..)
 cd ../
+composer install --no-dev --ignore-platform-reqs
 cp -r config drush modules settings themes vendor web $CLONEFOLDER/
-rm -rf web/sites/default/files
 cp ./{.composer.json,composer.lock,composer.patches.json,package.json,package-lock.json,pantheon.yml} $CLONEFOLDER/
 cd $CLONEFOLDER
+rm -rf ./web/sites/default/files
 # Change CUSTOMTHEME by your own theme folder.
 if [ -f ./themes/custom/CUSTOMTHEME/package.json ]; then
   cd ./themes/custom/CUSTOMTHEME
