@@ -1,0 +1,29 @@
+uuid: c85ed014-1d1b-440b-beeb-6e416e1e99d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file
+    - media.type.file
+  module:
+    - file
+_core:
+  default_config_hash: WFvmRlq5D9mh4WfQFnA2o2q90YXuL994Wr1BxQHhOwc
+id: media.file.field_media_file
+field_name: field_media_file
+entity_type: media
+bundle: file
+label: File
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'doc docx xls xlsx pdf ppt pps'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

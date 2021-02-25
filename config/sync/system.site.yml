@@ -1,0 +1,15 @@
+name: 'Panthon template'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+mail_notification: ''
+_core:
+  default_config_hash: kFLSOjaWFfawAxFTZclDYQwVzpfwoxLsHWeeKzzAUVo
+uuid: e6191fd0-ba37-4233-a58f-6401649f27eb

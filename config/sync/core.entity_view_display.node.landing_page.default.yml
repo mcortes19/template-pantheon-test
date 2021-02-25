@@ -1,0 +1,21 @@
+uuid: 518b3096-9bd4-473a-971c-0704ef606b2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+  module:
+    - user
+_core:
+  default_config_hash: NTd35l9r7eW0NhNAkIB142lLKF0auqs52cBkndzqNQU
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

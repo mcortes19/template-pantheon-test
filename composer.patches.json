@@ -1,0 +1,11 @@
+
+{
+  "patches": {
+    "drupal/media_entity_facebook": {
+      "https://www.drupal.org/node/3120085": "https://www.drupal.org/files/issues/2020-03-31/3120085-media-library-add-5.patch"
+    },
+    "drupal/media_entity_instagram": {
+      "https://www.drupal.org/node/3118095": "https://www.drupal.org/files/issues/2020-09-03/3118095-10.patch"
+    }
+  }
+}

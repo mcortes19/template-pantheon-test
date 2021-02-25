@@ -1,0 +1,13 @@
+uuid: f29a3ec0-dfb3-48ae-8cb9-6530edbfc073
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nX_HojtQCdDw7RcyUVttvYc0fQBNlyrnzvc8J8hC4i0
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'

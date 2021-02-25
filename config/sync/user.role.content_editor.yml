@@ -1,0 +1,56 @@
+uuid: 17a0e65b-1013-4018-b9c0-997d328311e9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gY2PKwB2xFIeCVc_HkBkKwFCxbCL5xYoq_wKSMcMFTs
+id: content_editor
+label: 'Content editor'
+weight: -8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'create file media'
+  - 'create image media'
+  - 'create landing_page content'
+  - 'create media'
+  - 'create remote_video media'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any file media'
+  - 'delete any image media'
+  - 'delete any landing_page content'
+  - 'delete any media'
+  - 'delete any remote_video media'
+  - 'delete landing_page revisions'
+  - 'delete media'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete own landing_page content'
+  - 'delete own remote_video media'
+  - 'edit any file media'
+  - 'edit any image media'
+  - 'edit any landing_page content'
+  - 'edit any remote_video media'
+  - 'edit own file media'
+  - 'edit own image media'
+  - 'edit own landing_page content'
+  - 'edit own remote_video media'
+  - 'revert all revisions'
+  - 'revert landing_page revisions'
+  - 'update any media'
+  - 'update media'
+  - 'use text format basic_editor'
+  - 'use text format full_editor'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view landing_page revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

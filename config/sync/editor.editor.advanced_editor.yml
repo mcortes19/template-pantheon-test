@@ -1,0 +1,60 @@
+uuid: a3c96cf8-e1bb-427b-841d-d29dcc5774f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.advanced_editor
+  module:
+    - ckeditor
+_core:
+  default_config_hash: FHqatYkAQHe8__ug8R9XKmOpS3o1oJxu5feC3cmrdqc
+format: advanced_editor
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Format
+            - Bold
+            - Underline
+            - Italic
+            - Strike
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalMediaLibrary
+        -
+          name: Tools
+          items:
+            - Table
+            - Source
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

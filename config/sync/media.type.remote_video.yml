@@ -1,0 +1,20 @@
+uuid: 3c658dfe-405c-426f-916d-390d37129a02
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WYycNBU0BG8-XHGrFc0wot3NQZBlG3P68tJlYf3VWcg
+id: remote_video
+label: 'Remote video'
+description: 'This media entity allows you to add YouTube and Vimeo embedding.'
+source: 'oembed:video'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers:
+    - YouTube
+    - Vimeo
+  source_field: field_media_oembed_video
+field_map:
+  default_name: name
