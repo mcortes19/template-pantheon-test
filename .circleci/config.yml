@@ -121,7 +121,7 @@ jobs:
 
   deploy-dev:
     docker:
-      - image: kporras07/docker-drupal-nginx:php-7.3.x
+      - image: kporras07/docker-drupal-nginx:php-7.3.x-backstop
     working_directory: /var/www/local_site
     steps:
       - attach_workspace:
@@ -138,10 +138,8 @@ jobs:
             mv composer.phar /usr/bin/composer
       - run: composer install
       - run:
-          name: Install and login terminus
+          name: Login terminus
           command: |
-            mkdir terminus && cd terminus
-            curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
             ln -s /var/www/local_site/terminus/vendor/bin/terminus /usr/bin/terminus
             terminus auth:login --machine-token=$PANTHEON_TOKEN
       - run:
