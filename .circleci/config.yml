@@ -48,7 +48,6 @@ jobs:
           command: |
             mkdir terminus && cd terminus
             curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-            chmod +x terminus
             ln -s /var/www/local_site/terminus/vendor/bin/terminus /usr/bin/terminus
             terminus auth:login --machine-token=$PANTHEON_TOKEN
       - run:
@@ -136,7 +135,6 @@ jobs:
           command: |
             mkdir terminus && cd terminus
             curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-            chmod +x terminus
             ln -s /var/www/local_site/terminus/vendor/bin/terminus /usr/bin/terminus
             terminus auth:login --machine-token=$PANTHEON_TOKEN
       - run:
@@ -168,7 +166,6 @@ jobs:
           command: |
             mkdir terminus && cd terminus
             curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-            chmod +x terminus
             ln -s /var/www/local_site/terminus/vendor/bin/terminus /usr/bin/terminus
             terminus auth:login --machine-token=$PANTHEON_TOKEN
       - run:
@@ -195,7 +192,6 @@ jobs:
           command: |
             mkdir terminus && cd terminus
             curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-            chmod +x terminus
             ln -s /var/www/local_site/terminus/vendor/bin/terminus /usr/bin/terminus
             terminus auth:login --machine-token=$PANTHEON_TOKEN
       - run:
@@ -231,7 +227,6 @@ jobs:
           command: |
             mkdir terminus && cd terminus
             curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-            chmod +x terminus
             ln -s /var/www/local_site/terminus/vendor/bin/terminus /usr/bin/terminus
             terminus auth:login --machine-token=$PANTHEON_TOKEN
       - run: composer install
