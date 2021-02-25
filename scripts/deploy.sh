@@ -12,7 +12,6 @@ cd ../
 cp -r config drush modules settings themes vendor web $CLONEFOLDER/
 cp ./{.composer.json,composer.lock,composer.patches.json,package.json,package-lock.json,pantheon.yml} $CLONEFOLDER/
 cd $CLONEFOLDER
-composer install --ignore-platform-reqs
 # Change CUSTOMTHEME by your own theme folder.
 if [ -f ./themes/custom/CUSTOMTHEME/package.json ]; then
   cd ./themes/custom/CUSTOMTHEME

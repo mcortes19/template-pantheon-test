@@ -132,6 +132,7 @@ jobs:
             php composer-setup.php --version=1.10.17 && \
             php -r "unlink('composer-setup.php');"
             mv composer.phar /usr/bin/composer
+      - run: composer install
       - run:
           name: Install and login terminus
           command: |
