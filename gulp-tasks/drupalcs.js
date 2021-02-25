@@ -23,6 +23,7 @@ gulp.task('drupalcs', () => {
     `themes/**/*.{${extensions}}`,
     `tests/behat/**/*.{${extensions}}`,
     `settings/**/*.{${extensions}}`,
+    `!settings/**/settings.pantheon.php`,
   ];
 
   return (

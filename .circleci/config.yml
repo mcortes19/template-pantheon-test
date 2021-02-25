@@ -96,6 +96,7 @@ jobs:
             ./vendor/bin/drush cr
             echo "Importing config..."
             ./vendor/bin/drush config:set "system.site" uuid "$SITE_UUID" -y
+            ./vendor/bin/drush cr
             ./vendor/bin/drush cim -y
             ./vendor/bin/drush cim -y
             echo "Sanitizing database..."
