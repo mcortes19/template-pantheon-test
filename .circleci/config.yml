@@ -115,13 +115,17 @@ jobs:
             /etc/init.d/nginx start > nginx.log &
             /etc/init.d/php7.3-fpm start > php7.3-fpm.log &
             ./node_modules/.bin/lhci autorun --collect.url=http://local_site.local
+      - persist_to_workspace:
+          root: /var/www/
+          paths: local_site
 
   deploy-dev:
     docker:
       - image: kporras07/docker-drupal-nginx:php-7.3.x-backstop
     working_directory: /var/www/local_site
     steps:
-      - checkout
+      - attach_workspace:
+          at: /var/www
       - add_ssh_keys:
       - run:
           name: Install Composer
