@@ -3,6 +3,7 @@
 /**
  * @file
  * Contains \DrupalProject\composer\ScriptHandler.
+ * https://github.com/pantheon-systems/example-drops-8-composer/blob/master/scripts/composer/ScriptHandler.php
  */
 
 namespace DrupalProject\composer;
@@ -73,11 +74,5 @@ class ScriptHandler
     }
     $fs = new Filesystem();
     $fs->remove($dirsToDelete);
-
-    // Fix up .gitignore: remove everything above the "::: cut :::" line
-    $gitignoreFile = getcwd() . '/.gitignore';
-    $gitignoreContents = file_get_contents($gitignoreFile);
-    $gitignoreContents = preg_replace('/.*::: cut :::*/s', '', $gitignoreContents);
-    file_put_contents($gitignoreFile, $gitignoreContents);
   }
 }
