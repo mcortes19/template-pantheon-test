@@ -16,8 +16,8 @@ fi
 if [ -d ./web/sites/default/files ]; then
   rm -rf ./web/sites/default/files
 fi
-cp -r config drush modules scripts/composer settings themes vendor web $CLONEFOLDER/
-cp ./{.drush-lock-update,composer.json,composer.lock,composer.patches.json,package.json,package-lock.json,pantheon.yml} $CLONEFOLDER/
+cp -r config drush modules settings themes vendor web $CLONEFOLDER/
+cp ./{scripts/composer/ScriptHandler.php,.drush-lock-update,composer.json,composer.lock,composer.patches.json,package.json,package-lock.json,pantheon.yml} $CLONEFOLDER/
 cd $CLONEFOLDER
 composer prepare-for-pantheon
 # Change CUSTOMTHEME by your own theme folder.
