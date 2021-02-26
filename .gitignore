@@ -30,6 +30,7 @@ vendor
 # Settings
 settings.secret.php
 settings.local.php
+settings.pantheon.php
 services.local.yml
 !.circleci/settings.secret.php
 

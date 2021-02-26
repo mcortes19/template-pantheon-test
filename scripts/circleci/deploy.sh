@@ -9,13 +9,14 @@ git branch $BRANCH ; git checkout $BRANCH
 shopt -s extglob
 rm -rf ./!(.git|.|..)
 cd ../
-composer prepare-for-pantheon
+composer install --no-dev --ignore-platform-reqs
 if [ -f ./web/sites/default/settings.secret.php ]; then
   rm ./web/sites/default/settings.secret.php
 fi
 cp -r config drush modules scripts/composer settings themes vendor web $CLONEFOLDER/
 cp ./{.drush-lock-update,.composer.json,composer.lock,composer.patches.json,package.json,package-lock.json,pantheon.yml} $CLONEFOLDER/
 cd $CLONEFOLDER
+composer prepare-for-pantheon
 # Change CUSTOMTHEME by your own theme folder.
 if [ -f ./themes/custom/CUSTOMTHEME/package.json ]; then
   cd ./themes/custom/CUSTOMTHEME
