@@ -1,0 +1,30 @@
+uuid: f473d498-f5cb-4a02-978a-bf4f084c08b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.instagram_post.field_media_oembed_instagram
+    - image.style.medium
+    - media.type.instagram_post
+  module:
+    - image
+id: media.instagram_post.media_library
+targetEntityType: media
+bundle: instagram_post
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_oembed_instagram: true
+  name: true
+  uid: true

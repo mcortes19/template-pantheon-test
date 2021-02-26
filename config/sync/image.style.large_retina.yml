@@ -1,0 +1,25 @@
+uuid: a2146694-2bc7-44a6-83ba-b0f14d400a47
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: large_retina
+label: 'Large (768 width retinafied)'
+effects:
+  019effc6-8d13-4970-b4b6-47421243dd98:
+    uuid: 019effc6-8d13-4970-b4b6-47421243dd98
+    id: image_scale
+    weight: 2
+    data:
+      width: 768
+      height: null
+      upscale: true
+      retinafy: 1
+      multiplier: '2'
+  ab1a95f2-3283-4771-831f-125e949f7af9:
+    uuid: ab1a95f2-3283-4771-831f-125e949f7af9
+    id: image_style_quality
+    weight: 3
+    data:
+      quality: 25

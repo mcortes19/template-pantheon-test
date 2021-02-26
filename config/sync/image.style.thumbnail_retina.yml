@@ -1,0 +1,19 @@
+uuid: 9cb526a5-addd-4a7f-8658-36f6f8c22b70
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sbKrxx_sHWdBV4gMxPkcexhnIm5o8AaUC5iSE41XXFc
+name: thumbnail_retina
+label: 'Thumbnail (100×100 retinafied)'
+effects:
+  1cfec298-8620-4749-b100-ccb6c4500779:
+    uuid: 1cfec298-8620-4749-b100-ccb6c4500779
+    id: image_scale
+    weight: 0
+    data:
+      width: 100
+      height: 100
+      upscale: false
+      retinafy: true
+      multiplier: 2

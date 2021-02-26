@@ -1,0 +1,15 @@
+uuid: a5c437f5-82c0-4df6-a420-5c0c4a1d495a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_instagram
+id: instagram_post
+label: 'Instagram post'
+description: 'This media entity allows you to add an Instagram Post.'
+source: instagram
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_oembed_instagram
+field_map: {  }

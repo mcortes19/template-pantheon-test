@@ -2,11 +2,14 @@ uuid: 4f5c8071-63bc-4c96-8890-566c5134fd8d
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.large
+    - core.entity_view_mode.media.medium
+    - core.entity_view_mode.media.small
+    - core.entity_view_mode.media.wide
   module:
     - editor
     - media
-_core:
-  default_config_hash: Mf38mj6rtmC5zBzyjgIdpHwJNf9BNLEzmOgZKjieg5g
 name: 'Full editor'
 format: full_editor
 weight: -9
@@ -75,6 +78,10 @@ filters:
     status: true
     weight: -44
     settings:
-      default_view_mode: default
-      allowed_view_modes: {  }
+      default_view_mode: small
       allowed_media_types: {  }
+      allowed_view_modes:
+        large: large
+        medium: medium
+        small: small
+        wide: wide

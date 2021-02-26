@@ -2,11 +2,14 @@ uuid: b17bf2aa-4af0-4874-875a-9d94d0063ed4
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.large
+    - core.entity_view_mode.media.medium
+    - core.entity_view_mode.media.small
+    - core.entity_view_mode.media.wide
   module:
     - editor
     - media
-_core:
-  default_config_hash: owJTzqHaJujP9BlVVjxsJujNUYioTJuFPCOwnuw-ZAo
 name: 'Advanced editor'
 format: advanced_editor
 weight: -10
@@ -48,9 +51,13 @@ filters:
     status: true
     weight: 100
     settings:
-      default_view_mode: default
-      allowed_view_modes: {  }
+      default_view_mode: small
       allowed_media_types: {  }
+      allowed_view_modes:
+        large: large
+        medium: medium
+        small: small
+        wide: wide
   filter_html:
     id: filter_html
     provider: filter

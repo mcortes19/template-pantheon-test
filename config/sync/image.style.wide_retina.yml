@@ -1,0 +1,25 @@
+uuid: 0f2ebdc7-bb28-4be6-a1b3-29e509a15496
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: wide_retina
+label: 'Wide (950 width retinafied)'
+effects:
+  0bf23731-776c-4d3d-9bb7-a0c9ed172dfb:
+    uuid: 0bf23731-776c-4d3d-9bb7-a0c9ed172dfb
+    id: image_scale
+    weight: 1
+    data:
+      width: 950
+      height: null
+      upscale: true
+      retinafy: 1
+      multiplier: '2'
+  3dcebd9a-d780-4d8b-9e0f-bacee4a7d300:
+    uuid: 3dcebd9a-d780-4d8b-9e0f-bacee4a7d300
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 25

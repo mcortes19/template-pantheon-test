@@ -1,0 +1,33 @@
+uuid: f0d1ed79-47da-449b-9603-8710089e6eed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.facebook_post.field_media_facebook
+    - media.type.facebook_post
+id: media.facebook_post.default
+targetEntityType: media
+bundle: facebook_post
+mode: default
+content:
+  field_media_facebook:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  status: true
+  uid: true

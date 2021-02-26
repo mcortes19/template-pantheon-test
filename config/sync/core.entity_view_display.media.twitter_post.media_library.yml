@@ -1,0 +1,30 @@
+uuid: 02ba11c3-754b-4b0d-8301-a530eba268f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.twitter_post.field_media_twitter
+    - image.style.medium
+    - media.type.twitter_post
+  module:
+    - image
+id: media.twitter_post.media_library
+targetEntityType: media
+bundle: twitter_post
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_twitter: true
+  name: true
+  uid: true

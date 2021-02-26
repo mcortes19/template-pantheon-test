@@ -1,0 +1,25 @@
+uuid: 7dbde31b-ace3-439b-840c-3aca2eae1cff
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: medium_retina
+label: 'Medium (250 width retinafied)'
+effects:
+  d0c65900-a517-4f83-846f-123c8694d019:
+    uuid: d0c65900-a517-4f83-846f-123c8694d019
+    id: image_scale
+    weight: 2
+    data:
+      width: 250
+      height: null
+      upscale: true
+      retinafy: 1
+      multiplier: '2'
+  a6f77b36-9920-4a58-a78d-6e56d76fe002:
+    uuid: a6f77b36-9920-4a58-a78d-6e56d76fe002
+    id: image_style_quality
+    weight: 3
+    data:
+      quality: 25

@@ -1,0 +1,30 @@
+uuid: e54afcc1-f826-4232-a0dd-af13ab9fe31b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.facebook_post.field_media_facebook
+    - image.style.medium
+    - media.type.facebook_post
+  module:
+    - image
+id: media.facebook_post.media_library
+targetEntityType: media
+bundle: facebook_post
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_facebook: true
+  name: true
+  uid: true

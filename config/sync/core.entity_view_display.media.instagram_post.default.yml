@@ -1,0 +1,28 @@
+uuid: d2c775cb-7711-45fb-b17f-64e4efcc3a8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.instagram_post.field_media_oembed_instagram
+    - media.type.instagram_post
+  module:
+    - media_entity_instagram
+id: media.instagram_post.default
+targetEntityType: media
+bundle: instagram_post
+mode: default
+content:
+  field_media_oembed_instagram:
+    type: instagram_embed
+    label: hidden
+    weight: 0
+    settings:
+      max_width: 0
+      max_height: null
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

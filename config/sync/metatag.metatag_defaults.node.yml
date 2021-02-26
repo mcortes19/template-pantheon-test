@@ -1,0 +1,22 @@
+uuid: 2ffbf415-1b9c-469f-b3cd-417e0f57c6c9
+langcode: en
+status: true
+dependencies: {  }
+id: node
+label: Content
+tags:
+  shortlink: '[node:url]'
+  title: '[node:title] | [site:name]'
+  content_language: '[node:langcode]'
+  canonical_url: '[node:url]'
+  description: '[node:summary]'
+  abstract: '[node:summary]'
+  og_type: website
+  og_url: '[node:url]'
+  og_description: '[node:summary]'
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'
+  twitter_cards_page_url: '[node:url]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_type: summary
+  twitter_cards_title: '[node:title]'

@@ -1,0 +1,34 @@
+uuid: 8ae51949-32e0-42f8-b2a7-d8098bc4fb11
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.small
+    - field.field.media.image.field_media_image
+    - image.style.small_retina
+    - media.type.image
+  module:
+    - svg_image
+id: media.image.small
+targetEntityType: media
+bundle: image
+mode: small
+content:
+  field_media_image:
+    label: visually_hidden
+    weight: 0
+    settings:
+      image_style: small_retina
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,33 @@
+uuid: 738675bc-6884-45ae-a7dd-1dc6210d9402
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.twitter_post.field_media_twitter
+    - media.type.twitter_post
+id: media.twitter_post.default
+targetEntityType: media
+bundle: twitter_post
+mode: default
+content:
+  field_media_twitter:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  status: true
+  uid: true

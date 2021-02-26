@@ -1,0 +1,18 @@
+uuid: 1d31d089-68c3-403d-b6b8-9109ce79a41f
+langcode: en
+status: true
+dependencies: {  }
+id: front
+label: 'Front page'
+tags:
+  shortlink: '[site:url]'
+  title: '[node:title] | [site:name]'
+  content_language: '[node:langcode]'
+  canonical_url: '[site:url]'
+  og_type: website
+  og_url: '[node:url]'
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'
+  twitter_cards_page_url: '[node:url]'
+  twitter_cards_type: summary
+  twitter_cards_title: '[node:title]'

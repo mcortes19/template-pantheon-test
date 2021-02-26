@@ -1,0 +1,25 @@
+uuid: bbdff335-09df-410a-861b-2a5d0e82f33f
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_style_quality
+name: small_retina
+label: 'Small (150 width retinafied)'
+effects:
+  d0024ad0-3fc6-4caa-97c0-e24226dc682d:
+    uuid: d0024ad0-3fc6-4caa-97c0-e24226dc682d
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: null
+      upscale: true
+      retinafy: 1
+      multiplier: '2'
+  f87c15ad-e64d-43b8-84ed-a673a46e6be4:
+    uuid: f87c15ad-e64d-43b8-84ed-a673a46e6be4
+    id: image_style_quality
+    weight: 2
+    data:
+      quality: 25
