@@ -181,6 +181,9 @@ jobs:
             echo 'Host *' >> /root/.ssh/config
             echo '   StrictHostKeyChecking no' >> /root/.ssh/config
             terminus env:deploy $PANTHEON_PROJECT_NAME.test --note "Autodeploy from Circle" -y
+            terminus env:clone-content $PANTHEON_PROJECT_NAME.live test -y
+            terminus drush $PANTHEON_PROJECT_NAME.test -- cr
+            terminus drush drupal-composer-site.test -- sqlsan --sanitize-password=test -y
             terminus drush $PANTHEON_PROJECT_NAME.test -- updb -y
             terminus drush $PANTHEON_PROJECT_NAME.test -- cr
             terminus drush $PANTHEON_PROJECT_NAME.test -- cim -y
@@ -206,6 +209,7 @@ jobs:
             git config --global user.name $GIT_NAME
             echo 'Host *' >> /root/.ssh/config
             echo '   StrictHostKeyChecking no' >> /root/.ssh/config
+            terminus backup:create $PANTHEON_PROJECT_NAME.live -y
             terminus env:deploy $PANTHEON_PROJECT_NAME.live --note "Autodeploy from Circle" -y
             terminus drush $PANTHEON_PROJECT_NAME.live -- updb -y
             terminus drush $PANTHEON_PROJECT_NAME.live -- cim -y

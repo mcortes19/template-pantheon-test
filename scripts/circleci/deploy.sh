@@ -20,13 +20,6 @@ cp -r config drush modules scripts settings themes vendor web $CLONEFOLDER/
 cp ./{.drush-lock-update,composer.json,composer.lock,composer.patches.json,package.json,package-lock.json,pantheon.yml} $CLONEFOLDER/
 cd $CLONEFOLDER
 composer prepare-for-pantheon
-# Change CUSTOMTHEME by your own theme folder.
-if [ -f ./themes/custom/CUSTOMTHEME/package.json ]; then
-  cd ./themes/custom/CUSTOMTHEME
-  if [ ! -d ./node_modules ]; then npm install; fi
-  npm run build
-  cd ../../../
-fi
 git add --all .
 git commit -m "$MESSAGE"
 git push origin $BRANCH
