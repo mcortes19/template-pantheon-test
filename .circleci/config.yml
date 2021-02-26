@@ -151,7 +151,7 @@ jobs:
             echo 'Host *' >> /root/.ssh/config
             echo '   StrictHostKeyChecking no' >> /root/.ssh/config
             terminus connection:set $PANTHEON_PROJECT_NAME.dev git
-            ./scripts/deploy.sh master "Auto deploy triggered from master branch"
+            ./scripts/circleci/deploy.sh master "Auto deploy triggered from master branch"
             terminus connection:set $PANTHEON_PROJECT_NAME.dev sftp
             terminus drush $PANTHEON_PROJECT_NAME.dev -- si bloom --account-pass=admin -y
             terminus connection:set $PANTHEON_PROJECT_NAME.dev git
@@ -227,6 +227,7 @@ jobs:
             php composer-setup.php && \
             php -r "unlink('composer-setup.php');"
             mv composer.phar /usr/bin/composer
+      - run: composer install
       - run:
           name: Install and login terminus
           command: |
@@ -234,7 +235,6 @@ jobs:
             curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
             ln -s /var/www/local_site/terminus/vendor/bin/terminus /usr/bin/terminus
             terminus auth:login --machine-token=$PANTHEON_TOKEN
-      - run: composer install
       - run:
           name: Create multidev environment
           command: |
@@ -256,7 +256,7 @@ jobs:
             git config --global user.name $GIT_NAME
             echo 'Host *' >> /root/.ssh/config
             echo '   StrictHostKeyChecking no' >> /root/.ssh/config
-            ./scripts/deploy.sh $NEWBRANCH "Auto deploy triggered from master branch"
+            ./scripts/circleci/deploy.sh $NEWBRANCH "Auto deploy triggered from master branch"
             terminus drush $PANTHEON_PROJECT_NAME.$NEWBRANCH -- cr
             terminus drush $PANTHEON_PROJECT_NAME.$NEWBRANCH -- sqlsan -y
             terminus drush $PANTHEON_PROJECT_NAME.$NEWBRANCH -- updb -y

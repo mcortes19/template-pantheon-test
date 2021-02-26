@@ -20,7 +20,7 @@ This template uses [chirripo](https://docs.chirripo.dev/) as local environment.
 Generate local settings files **(run this command at root of the project)**:
 
 ```bash
-./scripts/local-settings.sh
+./scripts/dev/local-settings.sh
 ```
 
 Install the requiered dependencies:
@@ -39,7 +39,7 @@ chirripo start
 Install the local site **(run this command at root of the project)**:
 
 ```bash
-./scripts/site-install.sh
+./scripts/dev/site-install.sh
 ```
 
 Enable and configure the [Chirripo Proxy](https://docs.chirripo.dev/chirripo-proxy/).
@@ -57,7 +57,7 @@ Download database in the root of the project, then change the name of the file b
 Import the databese:
 
 ```bash
-./scripts/install-from-db.sh
+./scripts/dev/install-from-db.sh
 ```
 
 Add the site URL in the  `settings/settings.local.php` file:
