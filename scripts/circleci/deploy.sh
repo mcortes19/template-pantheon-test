@@ -13,7 +13,7 @@ composer install --no-dev --ignore-platform-reqs
 if [ -f ./web/sites/default/settings.secret.php ]; then
   rm ./web/sites/default/settings.secret.php
 fi
-if [ ! -d ./web/sites/default/files ]; then
+if [ -d ./web/sites/default/files ]; then
   rm -rf ./web/sites/default/files
 fi
 cp -r config drush modules scripts/composer settings themes vendor web $CLONEFOLDER/
